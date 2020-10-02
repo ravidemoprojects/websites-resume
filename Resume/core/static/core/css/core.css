@@ -1,0 +1,45 @@
+html,
+body{
+    height: 100%;
+}
+.container-fluid{
+    min-height: 100%;
+}
+
+
+
+/* This is for name */
+.name{
+    font-family: 'Satisfy', cursive;
+}
+
+
+/* This is for all anchor tags */
+a{
+    color: orange;
+}
+
+
+/* This is for side bar hovering background */
+.s1:hover{
+    background-color: orange;
+    color: white;
+
+}
+.s2:hover{
+    background-color: orange;
+    color: white;
+
+}
+.s3:hover{
+    background-color: orange;
+    color: white;
+
+}
+.s4:hover{
+    background-color: orange;
+    color: white;
+
+}
+
+

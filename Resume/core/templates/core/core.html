@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'core/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    {% block corecss %}<link rel="stylesheet" href="{% static 'core/css/core.css' %}">{% endblock corecss %}
+    <title>{% block title %} {% endblock title %}</title>
+    
+    
+</head>
+<body>
+
+<div class="container-fluid bg-dark">
+    <div class="row ">
+        <div class='col-lg-2 col-md-6 col-sm-12'>
+            {% include 'core/sidebar.html' %}
+        <div class="col-lg-10 col-md-6 col-sm-12">
+            {% block content %} {% endblock content %} <br> <hr>
+
+            <div class='text-center text-success fa-2x my-5'>
+                <a href="https://www.instagram.com/m_ravi_2812/"><i class="fab fa-instagram mx-5"></i></a>
+                <a href="https://www.facebook.com/bestDiscountdeals1"><i class="fab fa-facebook-square mx-5"></i></a>
+                <a href="https://www.linkedin.com/in/ravi-kumar-8a5359128/"><i class="fab fa-linkedin-in mx-5"></i></a>
+                <a href="https://twitter.com/explore"><i class="fab fa-twitter mx-5"></i></a>
+                <a href="{% url 'contact' %}"><i class="fab fa-whatsapp mx-5"></i></a>
+                
+
+
+
+
+            </div>
+            
+        
+        
+            
+        </div>
+        
+         
+    </div>
+
+
+
+        
+    
+    
+    
+
+
+
+
+
+
+
+
+<script src="{% static 'core/js/jquery.js'%}"></script>
+<script src="{% static 'core/js/bootstrap.js'%}"></script>
+<script src="{% static 'core/js/popper.js'%}"></script>
+<script src="{% static 'core/js/all.min.js'%}"></script>
+</body>
+</html>

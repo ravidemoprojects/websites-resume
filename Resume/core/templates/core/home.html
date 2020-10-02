@@ -1,0 +1,28 @@
+{% extends 'core/core.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+<div class='mt-5'>
+    <div class='text-center'>
+        <img src="{% static 'core/images/ravi.jpg' %}" alt="Profile pic" class='img-fluid border border-warning shadow-lg mb-5 img-thumbnail' height='400px' width='200px' >
+
+    </div>
+    <div>
+        <h3 style="text-indent:100px" class='text-white name'>Hello,</h3><br>
+    </div>
+    <div class='mx-5 text-justify'>
+        <p style="text-indent:160px" class='text-white'>I am Ravi Kumar having knowledge of full-stack developer with python as a language. I offer the technical expertise you are seeking for your web developer position..</p><br>
+        <p class='text-white'>I have done my Python language and full stack course from online sources with 2 major front end projects. I want to be an expert in full stack developer field with Python through commitments and continues improvement.</p>
+        <p class='text-white'>For background refernece i have completed my graduation in Mechanical Engineering from Gautam Buddha University Greater Noida. Course duration was of 5 years dual degree program (2013-2018) in Mechanical + Thermal Engineering. </p>
+    </div><br>
+    <div class='text-center'>
+    <a href="https://www.linkedin.com/in/ravi-kumar-8a5359128/" class="btn btn-outline-success mx-5 shadow-lg">Hire Me</a>
+    <a href="{% url 'contact' %}" class="btn btn-outline-primary shadow-lg">Contact</a>
+    </div>
+
+
+
+</div>
+
+
+{% endblock content %}

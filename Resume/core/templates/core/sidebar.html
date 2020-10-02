@@ -1,0 +1,15 @@
+ {% load static %}
+ <div class='border-right border-warning h-100 text-center'>
+                <div>
+                    <img src="{% static 'core/images/ravi.jpg' %}" alt="" class='img-fluid rounded-circle mt-5 mb-1' width='100px' height='100px'> 
+                    <h5 class='text-white mt-3 name'>Ravi Kumar</h5><hr class='border-light'>
+                </div>
+                
+                    <nav class='nav flex-column'>
+                        <a class='nav-link {{home}}   s1' href="{% url 'home' %}">Home</a>
+                        <a class='nav-link {{service}} s2' href="{% url 'services' %}">Services</a>
+                        <a class='nav-link {{skill}} s3' href="{% url 'skills' %}">Skills</a>
+                        <a class='nav-link {{contact}} s4' href="{% url 'contact' %}">Contact</a>
+                    </nav>
+                </div>
+            </div>
