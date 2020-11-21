@@ -1,0 +1,64 @@
+{% extends 'core/base.html' %}
+{% block title %} SignUp {% endblock title %} 
+{% block content %} 
+    <div class="container">
+        <div class='p-4 m-4'>
+            <div class='col-lg-6 mx-auto border-rounded pt-4'>
+            <h3 class='alert alert-dark'>Create a Account</h3>
+                <form action="" method ='POST'>{% csrf_token %}
+                {% if error %}
+                <div class="alert alert-danger" role="alert">
+                  {{error}}
+                </div>
+                {% endif %}
+                <!--First Name-->
+                    <div class="form-group">
+                      <label required for="">First Name</label>
+                      <input type="text" value='{{values.first_name}}' name="firstname" id="" class="form-control" placeholder="Enter Your First Name" aria-describedby="helpId">
+                    </div>
+
+
+                <!--Last Name-->
+                    <div class="form-group">
+                      <label for="">Last Name</label>
+                      <input type="text" value='{{values.last_name}}' name="lastname" id="" class="form-control" placeholder="Enter Your Last Name" aria-describedby="helpId">
+                    </div>
+
+
+                    <!--Phone Number-->
+                    <div class="form-group">
+                      <label for="">Phone Number</label>
+                      <input  type="text" value='{{values.phone_number}}' name="phonenumber" id="" class="form-control" placeholder="12345xxx.." aria-describedby="helpId">
+                    </div>
+                    <!--Email-->
+                    <div class="form-group">
+                      <label for="">Email</label>
+                      <input required value='{{values.email}}' type="email" name="email" id="" class="form-control" placeholder="xyz@email.com" aria-describedby="helpId">
+                    </div>
+                    
+                    <!--Password-->
+                    <div class="form-group">
+                      <label for="">Password</label>
+                      <input required type="password" name="password" id="" class="form-control" placeholder="*******" aria-describedby="helpId">
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

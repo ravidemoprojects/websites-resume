@@ -1,0 +1,22 @@
+.doubt{
+    margin-top: 150px;  
+    padding-left: 10px; 
+    background-color: skyblue;
+    border-radius: 100em;
+}
+
+span{
+    color: blue;
+}
+
+.img{
+    border-radius: 1em;
+}
+
+#btn{
+    border-radius: 15em;
+}
+
+a{
+    color: black;
+}

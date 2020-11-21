@@ -1,0 +1,30 @@
+{% extends 'core/core.html' %}
+{% load static %}
+{% block css %} <link rel="stylesheet" href="{% static 'core/css/home.css' %}">
+{% endblock css %}
+{% block title %} Home {% endblock title %} 
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 col-sm-12 text-center">
+            <h2 class='doubt mb-5'><b>Simplify your <span>doubts</span> in your language </b></h2>
+            <button class='btn btn-outline-success my-3' id='btn' ><a href="{% url 'adddoubt' %}"><b>Ask your doubt now</b></a></button>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            <img class='img' src="{% static 'core/images/doubt.jpg' %}" alt="Image is not avaliable">
+        </div>
+    
+    
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

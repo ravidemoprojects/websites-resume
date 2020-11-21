@@ -1,0 +1,48 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Home{% endblock title %}
+
+{% block content %}
+{% load cart %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+         <ul class="list-group my-5 text-center">
+                <a href="/" class="list-group-item list-group-item-action">All Products</a>
+            </ul>
+            {% for catogory in catogorys %}
+            <ul class="list-group my-5 text-center">
+                <a href="/?catogory={{catogory.id}}" class="list-group-item list-group-item-action">{{catogory.name}}</a>
+            </ul>
+            {% endfor %}
+        </div>
+        <div class="col-lg-9 col-md-6 col-sm-12 mx-auto">
+            <div class="row mx-auto my-4 ">
+                {% for product in products %}
+                
+                        
+                            <div class="card text-center mx-auto my-4" style="width: 18rem; height: 35rem;">
+                            <img src="{{product.image.url}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title ">{{product.name}}</h5>
+                                <p class="card-text  "><b>{{product.price}}</b></p>
+                                {{product | is_in_cart:request.session.cart}}
+                                <form action="/" method="POST">{% csrf_token %}
+                                    <input hidden type="text" name="product" value='{{product.id}}'>
+                                    <input type ='submit' class="btn btn-primary" value='Add to cart'>
+                                </form>
+                                
+                            </div>
+                            </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+{% endblock content %}

@@ -1,0 +1,28 @@
+body {
+    background-color: #FF8B00;
+    color: black;
+}
+
+.navbar{
+    background-color: #FFE3A4;
+}
+
+.jumbo-color{
+    background-color: #FFE3A4;
+}
+
+.nav-link{
+    color: black;
+}
+
+.navbar-brand{
+    color: black;
+}
+
+.about-para{
+    background-color:#FFE3A4 ;
+}
+
+.form-control{
+    background-color: #FFE3A4;
+}
